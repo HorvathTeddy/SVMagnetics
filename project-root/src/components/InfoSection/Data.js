@@ -26,6 +26,8 @@ export const homeObjOne =
     img: HHD,
     buttonName: 'Learn More',
     to: 'heritage',
+    bgColor: 'white',
+    textColor: 'black',
     items: [
         {
           image: testing2,
@@ -57,6 +59,8 @@ export const homeObjTwo =
     img: RP,
     buttonName: 'Checkout our testimonials',
     to: 'testimonials',
+    bgColor: 'black',
+    textColor: 'white',
     items: [
         {
           image: slide1,

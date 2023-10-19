@@ -3,6 +3,7 @@ import {
     ServicesContainer,
     ServicesH1,
     ServicesWrapper,
+    ServicesWrapper2,
     ServicesCard,
     ServicesIcon,
     ServicesH2,
@@ -34,17 +35,47 @@ const services = () => {
         <ServicesWrapper>
             <ServicesCard>
                 <ServicesH2>
-                    Our Products
+                    Magnetics
                 </ServicesH2>
                 <ServicesDiv>
                     <ServicesLinks to='/magnetics'>Magnetics</ServicesLinks>
+                </ServicesDiv>
+            </ServicesCard>
+            <ServicesCard>
+                <ServicesH2>
+                    Electro-Mechanical Assemblies
+                </ServicesH2>
+                <ServicesDiv>
                     <ServicesLinks to='/electro-mechanical-assemblies'>Electro-Mechanical Assemblies</ServicesLinks>
+                </ServicesDiv>
+            </ServicesCard>
+            <ServicesCard>
+                <ServicesH2>
+                    Fiber-Optic Cables
+                </ServicesH2>
+                <ServicesDiv>
                     <ServicesLinks to='/fiber-optic-cables'>Fiber-Optic Cables</ServicesLinks>
-                    <ServicesLinks to='/coaxial-cables'>Coaxial Cables</ServicesLinks>
-                    <ServicesLinks to='/nycoil-cable-assemblies'>Nycoil™ Cable Assemblies</ServicesLinks>
                 </ServicesDiv>
             </ServicesCard>
         </ServicesWrapper>
+        <ServicesWrapper2>
+            <ServicesCard>
+                <ServicesH2>
+                    Coaxial Cables
+                </ServicesH2>
+                <ServicesDiv>
+                    <ServicesLinks to='/coaxial-cables'>Coaxial Cables</ServicesLinks>
+                </ServicesDiv>
+            </ServicesCard>
+            <ServicesCard>
+                <ServicesH2>
+                    Nycoil™ Cable Assemblies
+                </ServicesH2>
+                <ServicesDiv>
+                    <ServicesLinks to='/nycoil-cable-assemblies'>Nycoil™ Cable Assemblies</ServicesLinks>
+                </ServicesDiv>
+            </ServicesCard>
+        </ServicesWrapper2>
     </ServicesContainer>
   )
 }

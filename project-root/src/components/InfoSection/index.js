@@ -15,13 +15,14 @@ ImgWrap,
 InfoBg,
 ImageBg,
  } from './InfoElements'
-import testingBg from '../../images/testing-room-bg.jpg'
+//import testingBg from '../../images/testing-room-bg.jpg'
 
 import { useState } from 'react';
 import styled, { css } from 'styled-components';
 
 import { ReactComponent as ChevronLeft } from './assets/chevron-left.svg';
 import { ReactComponent as ChevronRight } from './assets/chevron-right.svg';
+import { homeObjOne, homeObjTwo } from './Data';
 
 const Slideshow = (props) => {
   const [{ items, activeIndex }, setState] = useState({
@@ -69,37 +70,38 @@ const Slideshow = (props) => {
   );
 };
 
-const InfoSection = ({img, id, topLine, headLine, description, alt, imgStart, buttonName, to, items}) => {
+const InfoSection = ({img, id, topLine, headLine, description, alt, imgStart, buttonName, to, items, bgColor, textColor}) => {
   return (
     <>
-      <InfoContainer id={id}>
-        <InfoBg>
+      <InfoContainer id={id} style={{backgroundColor: bgColor}}>
+        {/* <InfoBg>
           <ImageBg style={{backgroundSize: '100% 100%'}}src={testingBg} type='image/jpg'></ImageBg>
-        </InfoBg>
+        </InfoBg> */}
         <InfoWrapper>
             <InfoRow imgStart={imgStart}>
                 <Column1>
                 <TextWrapper>
-                    <TopLine>
+                    <TopLine style={{color: textColor}}>
                         {topLine}
                     </TopLine>
-                    <Heading >
+                    <Heading style={{color: textColor}}>
                         {headLine}
                     </Heading>
-                    <Subtitle >
+                    <Subtitle style={{color: textColor}}>
                         {description}
                     </Subtitle>
+                    <BtnWrap>
+                        <Button to={to} smooth='true' duration={500} spy='true' exact='true' offset={-80}>
+                          {buttonName}
+                        </Button>
+                    </BtnWrap>
                 </TextWrapper>
                 </Column1>
                 <Column2>
                     <ImgWrap>
                       <Slideshow items={items}/>
                     </ImgWrap>
-                    <BtnWrap>
-                        <Button to={to} smooth='true' duration={500} spy='true' exact='true' offset={-80}>
-                          {buttonName}
-                        </Button>
-                    </BtnWrap>
+                    
                 </Column2>
             </InfoRow>
         </InfoWrapper>
@@ -163,7 +165,6 @@ const ImageBox = styled.div`
   background-color: transparent;
   width: 100%;
   height: 85%;
-  border: 3px solid black;
   border-radius: 33px;
 
   img {

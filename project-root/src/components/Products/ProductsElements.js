@@ -2,16 +2,18 @@ import styled from "styled-components";
 import { Link as LinkR } from 'react-router-dom'
 
 export const ServicesContainer = styled.div`
-    height: 900px;
+    height: 75vh;
+    //padding: 100px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+    background: black;
     /* background: #fffff0; */
     /* margin-bottom: -200px; */
-    background-image: url("http://www.svmagnetics.com/templates/scottsvalleymagnetics/images/magnetic-field-bg.jpg");
-    background-size: 100% 100%;
+   // background-image: url("http://www.svmagnetics.com/templates/scottsvalleymagnetics/images/magnetic-field-bg.jpg");
+   // background-size: 100% 100%;
 
     @media screen and (max-width: 1200px){
         height: 900px;
@@ -34,7 +36,35 @@ export const ServicesWrapper = styled.div`
     max-width: 1000px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    grid-gap: 16px;
+    grid-gap: 16px;
+    padding: 0 50px;
+
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: 1fr;
+    }
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    } 
+
+    @media screen and (max-width: 1200px) {
+        grid-template-columns: 1fr;
+    }
+
+    @media screen and (max-width: 1200px) {
+        grid-template-columns: 1fr;
+    }
+
+`
+export const ServicesWrapper2 = styled.div`
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     grid-gap: 16px;
     grid-gap: 16px;
@@ -66,7 +96,9 @@ export const ServicesCard = styled.div`
     justify-content: flex-start;
     align-items: center;
     border-radius: 10px;
-    max-width: fit-content;
+    margin: 10px;
+   // max-width: fit-content;
+    min-width: 50%;
     padding: 30px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     transition: all 0.2s ease-in-out;
@@ -92,10 +124,9 @@ export const ServicesIcon = styled.img`
 ` 
 
 export const ServicesH1 = styled.h1`
-    font-size: 2.5rem;
+    font-size: 4rem;
+    font-weight: bold;
     color: #fff;
-    margin-bottom: 0px;
-    padding: 50px 50px 50px 50px;
     border-radius: 33px;
     margin-bottom: 100px;
 
