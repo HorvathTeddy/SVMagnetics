@@ -8,9 +8,11 @@ export const HeroContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0 30px;
-    height: 1500px;
+    height: 100vh;
     position: relative;
     z-index: 3;
+    background-size: 100% 100%;
+    padding: 100px 0;
     /* min-width: 300px;
     margin: auto; */
 
@@ -54,11 +56,11 @@ export const VideoBg = styled.video`
     -o-object-fit: cover; 
     object-fit: cover;
     background: #fff;
+    opacity: 0.5;
 `
 
 export const HeroContent = styled.div`
     z-index: 3;
-    max-width: 1200px;
     /* position: relative;  */
     padding: 8px 24px;
     display: flex;
@@ -136,18 +138,30 @@ export const ServicesContainer = styled.div`
     align-items: center;
     position: relative;
     z-index: 2;
-    width: 166%;
+    width: 90%;
+    max-width: 1100px;
+`
+
+export const Header = styled.h1`
+    color: white;
+    font-weight: bold;
+    font-size: 4rem;
+    padding-bottom: 100px;
+`
+
+export const ContentContainer = styled.div`
+    display: flex;
 `
 
 export const ServicesWrapper = styled.div`
-    max-width: 1000px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     grid-gap: 16px;
     padding: 0 50px;
     z-index: 1;
+    flex: 0 0 35%;
     /* width: fit-content; */
 
     @media screen and (max-width: 1000px) {
@@ -224,11 +238,11 @@ export const ServicesP = styled.p`
     font-size: 24px;
     text-align: left;
     color: white;
-    margin-left: 66px;
-    margin-right: 66px;
-    width: 66%;
-    margin-bottom: 100px;
-    margin-top: 100px;
+    flex: 0 1 65%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     @media screen and (max-width: 480px) {
         width: 90%;

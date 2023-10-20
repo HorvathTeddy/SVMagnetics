@@ -2,14 +2,14 @@ import styled from "styled-components";
 import { Link as LinkR } from 'react-router-dom'
 
 export const ServicesContainer = styled.div`
-    height: 75vh;
+    height: 150vh;
     //padding: 100px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    background: black;
+    background: #101522;
     /* background: #fffff0; */
     /* margin-bottom: -200px; */
    // background-image: url("http://www.svmagnetics.com/templates/scottsvalleymagnetics/images/magnetic-field-bg.jpg");
@@ -33,11 +33,12 @@ export const ServicesContainer = styled.div`
 `
 
 export const ServicesWrapper = styled.div`
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
+    justify-content: center;
     grid-gap: 16px;
     grid-gap: 16px;
     padding: 0 50px;
@@ -66,6 +67,7 @@ export const ServicesWrapper2 = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    justify-content: center;
     grid-gap: 16px;
     grid-gap: 16px;
     padding: 0 50px;
@@ -98,7 +100,8 @@ export const ServicesCard = styled.div`
     border-radius: 10px;
     margin: 10px;
    // max-width: fit-content;
-    min-width: 50%;
+    min-width: 300px;
+    min-height: 480px;
     padding: 30px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     transition: all 0.2s ease-in-out;
@@ -114,9 +117,8 @@ export const ServicesCard = styled.div`
 `
 
 export const ServicesIcon = styled.img`
-    height: 500px;
-    width: 333px;
-    margin-bottom: 16px;
+    height: 300px;
+    width: 300px;
 
     @media screen and (max-width: 768px){
         width: 100%;
@@ -136,7 +138,8 @@ export const ServicesH1 = styled.h1`
 `
 
 export const ServicesH2 = styled.h2`
-    font-size: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
     margin-bottom: 10px;
     color: black;
 `
@@ -147,6 +150,7 @@ export const ServicesDiv = styled.div`
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    margin-top: auto;
 
     @media screen and (max-width: 480px){
         width: 130%;
@@ -155,23 +159,27 @@ export const ServicesDiv = styled.div`
 
 export const ServicesLinks = styled(LinkR)`
     border-radius: 50px;
-    background: #4169e1;
+    background: white;
+    border: 1px solid #4169e1;
+    //background: #4169e1;
     white-space: nowrap;
     padding: ${({big}) => (big ? '14px 48px' : '12px 30px')};
-    color: ${({dark}) => (dark ? '#010606' : '#fff')};
+    color: black;
+    //color: ${({dark}) => (dark ? '#010606' : '#fff')};
     font-size: ${({fontBig}) => (fontBig ? '20px' : '16px')};
     outline: none;
-    border: none;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center; 
+    text-decoration: none;
     transition: all 0.2s ease-in-out;
     margin: 12px;
+    min-width: 200px;
 
     &:hover {
-        background-color: white;
-        color: #4169e1;
+        background-color: #4169e1;
+        color: #fff;
     }
 
     @media screen and (max-width: 480px){

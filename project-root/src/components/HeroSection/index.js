@@ -5,7 +5,9 @@ import { HeroContainer, HeroBg, VideoBg, ServicesContainer,
     ServicesCard,
     ServicesIcon,
     ServicesH2,
-    ServicesP 
+    ServicesP,
+    Header,
+    ContentContainer
         } from './HeroElements'
 import MagneticBg from '../../videos/circuitboard.mp4'
 import { Button } from '../ButtonElement'
@@ -21,35 +23,37 @@ const HeroSection = () => {
     }
 
   return (
-    <HeroContainer id='home' style={{backgroundSize: '100% 100%'}}>
+    <HeroContainer id='home'>
         <HeroBg>
                 <VideoBg autoPlay loop muted src={MagneticBg} type='video/mp4' />
         </HeroBg>
         <ServicesContainer id='home'>
-        <div style={{color: 'white', fontSize: '32px', marginTop: '-300px', width: '77%', marginTop: 'auto'}}>
-            Welcome to Scotts Valley Magnetics
-        </div>
-        <ServicesP>
-                    <p>
-                        Scotts Valley Magnetics (SVM) was founded in 1971 with the purpose of supplying the electronics industry with superior products at competitive prices. SVM has the highest regard for customer service and quality. To uphold our standards, SVM maintains a staff of electronic engineers who actively participate in all stages of product design and assembly.
-                    </p>
+            <Header>
+                Welcome to Scotts Valley Magnetics
+            </Header>
+            <ContentContainer> 
+                <ServicesP>
+                            <p>
+                                Scotts Valley Magnetics (SVM) was founded in 1971 with the purpose of supplying the electronics industry with superior products at competitive prices. SVM has the highest regard for customer service and quality. To uphold our standards, SVM maintains a staff of electronic engineers who actively participate in all stages of product design and assembly.
+                            </p>
 
-                    <p>
-                        Our 15,000 Sq. Ft. facility, just minutes from the heart of Silicon Valley, provides both engineering and manufacturing at the same location. This establishes that all-important interface link between the sales, production, and technical staff.
-                    </p>
-                    
-                    <p>
-                        Our technical and manufacturing staff, together with state-of-the-art test facilities, enables SVM to respond quickly and effectively to customer requirements. A corporate commitment to customer service and implementation of Just-In-Time (JIT) philosophies ensure timely deliveries to customer-required schedules.
-                    </p>
-        </ServicesP>
-        <ServicesWrapper>
-            <ServicesCard>
-                <ServicesIcon src={Icon1}/>
-            </ServicesCard>
-            <ServicesCard>
-                <ServicesIcon src={Icon2}/>
-            </ServicesCard>
-        </ServicesWrapper>
+                            <p>
+                                Our 15,000 Sq. Ft. facility, just minutes from the heart of Silicon Valley, provides both engineering and manufacturing at the same location. This establishes that all-important interface link between the sales, production, and technical staff.
+                            </p>
+                            
+                            <p>
+                                Our technical and manufacturing staff, together with state-of-the-art test facilities, enables SVM to respond quickly and effectively to customer requirements. A corporate commitment to customer service and implementation of Just-In-Time (JIT) philosophies ensure timely deliveries to customer-required schedules.
+                            </p>
+                </ServicesP>
+                <ServicesWrapper>
+                    <ServicesCard>
+                        <ServicesIcon src={Icon1}/>
+                    </ServicesCard>
+                    <ServicesCard>
+                        <ServicesIcon src={Icon2}/>
+                    </ServicesCard>
+                </ServicesWrapper>
+            </ContentContainer>
     </ServicesContainer>
     </HeroContainer>
   )
